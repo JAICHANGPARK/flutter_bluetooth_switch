@@ -10,7 +10,7 @@ class FlutterBluetoothSwitch {
   static Future<bool> get turnOnBluetooth async {
     int? result = -1;
     try {
-      result = await (_channel.invokeMethod('turnOnBluetooth') as FutureOr<int>);
+      result = await (_channel.invokeMethod('turnOnBluetooth'));
     } on PlatformException catch (e) {
       print(e);
     }
@@ -24,7 +24,7 @@ class FlutterBluetoothSwitch {
   static Future<bool> get turnOffBluetooth async {
     int? result = -1;
     try {
-      result = await (_channel.invokeMethod('turnOffBluetooth') as FutureOr<int>);
+      result = await (_channel.invokeMethod('turnOffBluetooth'));
     } on PlatformException catch (e) {
       print(e);
     }
